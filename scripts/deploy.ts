@@ -15,27 +15,27 @@ async function main() {
 
   // We get the contract to deploy
   // const PancakeRouter = await ethers.getContractFactory("PancakeRouter");
-  // const router = await PancakeRouter.deploy("0x1CeE94a11eAf390B67Aa346E9Dda3019DfaD4f6A", "0x321F318e7C276c93Cf3094fd3a9d7c4362fd19FB");
+  // const router = await PancakeRouter.deploy("0xcd8620889c1dA22ED228e6C00182177f9dAd16b7", "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef");
 
   // await router.deployed();
 
   // console.log("router deployed to:", router.address);
 
-  //ERC20 test token
-  const ERC20 = await ethers.getContractFactory("ERC20");
-  const testToken = await ERC20.deploy("10000000000000000000000000");
+  // //ERC20 test token
+  // const ERC20 = await ethers.getContractFactory("ERC20");
+  // const testToken = await ERC20.deploy("10000000000000000000000000");
 
-  await testToken.deployed();
+  // await testToken.deployed();
 
-  console.log("testToken deployed to:", testToken.address);
+  // console.log("testToken deployed to:", testToken.address);
 
-  // //multicall
-  // const Multicall = await ethers.getContractFactory("Multicall");
-  // const multicall = await Multicall.deploy();
+  //multicall
+  const Multicall = await ethers.getContractFactory("Multicall");
+  const multicall = await Multicall.deploy();
 
-  // await multicall.deployed();
+  await multicall.deployed();
 
-  // console.log("multicall deployed to:", multicall.address);
+  console.log("multicall deployed to:", multicall.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

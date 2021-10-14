@@ -42,13 +42,13 @@ const config: HardhatUserConfig = {
     testnet: {
       url: "https://rpc.shibuya.astar.network:8545",
       chainId: 81,
-      gasPrice: 5000000000,
+      gasPrice: 1000000000,
       accounts: {mnemonic: mnemonic}
     },
     mainnet: {
       url: "https://rpc.shiden.astar.network:8545",
       chainId: 336,
-      gasPrice: 5000000000,
+      gasPrice: 1000000000,
       accounts: {mnemonic: mnemonic}
     },
   },
@@ -60,7 +60,7 @@ const config: HardhatUserConfig = {
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
   mocha: {
-    timeout: 60000
+    timeout: 120000
   }
 };
 
